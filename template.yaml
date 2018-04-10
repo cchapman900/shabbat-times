@@ -1,0 +1,12 @@
+Resources:
+  Zmanim:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: zmanim.handler
+      Runtime: python2.7
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /zmanim
+            Method: get
